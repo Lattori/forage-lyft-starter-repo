@@ -4,15 +4,23 @@ from car import Car
 
 
 def create_palindrome(current_date, last_service_date, warning_light_on, current_mileage):
-  Palindrome = CarFactory(current_date,last_service_date,warning_light_on,current_mileage)
+    Palindrome = CarFactory(current_date, last_service_date, warning_light_on, current_mileage)
 
 
 def create_rorschach(current_date, last_service_date, current_mileage, last_service_mileage):
-    Rorschach = CarFactory(current_date,last_service_date,current_mileage,last_service_mileage)
+    Rorschach = CarFactory(current_date, last_service_date, current_mileage, last_service_mileage)
 
 
 def create_thovex(current_date, last_service_date, current_mileage, service_mileage):
-    thovex = CarFactory(current_date,last_service_date,current_mileage,service_mileage)
+    thovex = CarFactory(current_date, last_service_date, current_mileage, service_mileage)
+
+
+def create_glissade(current_date, last_service_date, current_mileage, last_service_mileage):
+    glissade = CarFactory(current_date, last_service_date, current_mileage, last_service_mileage)
+
+
+def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
+    calliope = CarFactory(current_date, last_service_date, current_mileage, last_service_mileage)
 
 
 class CarFactory:
@@ -22,7 +30,7 @@ class CarFactory:
         self._current_mileage = current_mileage
         self._last_service_mileage = last_service_mileage
         self.warning_light_on = warning_light_on
-        super.__init__(self._last_service_mileage,self._current_mileage,self._current_date,self._last_service_date)
+        super.__init__(self._last_service_mileage, self._current_mileage, self._current_date, self._last_service_date)
 
     def set_current_date(self, current_date):
         self._current_date = current_date
@@ -53,19 +61,3 @@ class CarFactory:
 
     def get_warning_light(self):
         return self.warning_light_on
-
-    def create_calliope(self, current_date, last_service_date, current_mileage, last_service_mileage):
-        current_date = self.get_current_date()
-        last_service_mileage = self.get_last_service_mileage()
-        current_mileage = self.get_current_mileage()
-        last_service_mileage = self.get_last_service_mileage()
-
-    def create_glissade(self, current_date, last_service_date, current_mileage, last_service_mileage):
-       glissade = CarFactory(current_date,last_service_date,current_mileage,last_service_mileage)
-
-
-
-
-
-
-
