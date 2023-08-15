@@ -1,5 +1,6 @@
 from unittest import TestCase
 import capulet_engine
+from Tire import tire_wear_array
 
 
 class TestCapuletEngine(TestCase):

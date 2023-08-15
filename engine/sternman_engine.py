@@ -2,9 +2,11 @@ from abc import ABC
 
 from car import Car
 
+from Tire import tire_wear_array
+
 
 class SternmanEngine(Car, ABC):
-    def __init__(self, last_service_date, warning_light_is_on,Battery):
+    def __init__(self, last_service_date, warning_light_is_on, Battery):
         super().__init__(last_service_date)
         self.warning_light_is_on = warning_light_is_on
         self.Battery = Battery
@@ -15,7 +17,6 @@ class SternmanEngine(Car, ABC):
         else:
             return False
 
-    def Battery_should_be_served(self,twoyear):
+    def Battery_should_be_served(self, twoyear):
         if self.last_service_date > twoyear:
             self.needs_service()
-
